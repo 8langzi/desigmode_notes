@@ -1,4 +1,4 @@
-package src.responsibility;
+package src.responsibility.dynamic;
 
 public class ResponsibilityTest {
 

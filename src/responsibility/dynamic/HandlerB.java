@@ -1,6 +1,4 @@
-package src.responsibility;
-
-import java.util.logging.Handler;
+package src.responsibility.dynamic;
 
 public class HandlerB implements BaseHandler {
 
