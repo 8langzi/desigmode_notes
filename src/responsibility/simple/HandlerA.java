@@ -8,9 +8,6 @@ import java.util.List;
 public class HandlerA extends Handler {
 
     private String[] type = new String[]{"1","2","3"};
-
-
-
     public String[] getType() {
         return type;
     }
@@ -19,7 +16,13 @@ public class HandlerA extends Handler {
         this.type = type;
     }
 
-    public void handler(RequestBody requestBody) {
-
+    @Override
+    public void handle(RequestBody requestBody) {
+        if(requestBody == null){
+            return;
+        }
+        System.out.println("HandlerA 执行开始 ==== " + requestBody.getData() );
+        requestBody.setData(requestBody.getData().replace("A",""));
+        System.out.println("HandlerA 执行结束 ==== " + requestBody.getData());
     }
 }

@@ -13,8 +13,14 @@ public class HandlerB extends Handler{
         this.type = type;
     }
 
-    public void handler(RequestBody requestBody) {
-
+    @Override
+    public void handle(RequestBody requestBody) {
+        if(requestBody == null){
+            return;
+        }
+        System.out.println("HandlerA 执行开始 ==== " + requestBody.getData() );
+        requestBody.setData(requestBody.getData().replace("B",""));
+        System.out.println("HandlerA 执行结束 ==== " + requestBody.getData());
     }
 
 }
