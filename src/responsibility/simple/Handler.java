@@ -1,7 +1,5 @@
 package src.responsibility.simple;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Handler{
     String[] type;

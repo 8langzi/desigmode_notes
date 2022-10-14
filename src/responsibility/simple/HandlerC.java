@@ -1,8 +1,8 @@
 package src.responsibility.simple;
 
 
-public class HandlerB extends Handler{
-    private String[] type = new String[]{"2","3","4","b","c","e"};
+public class HandlerC extends Handler{
+    private String[] type = new String[]{"2","c","e"};
     public String[] getType() {
         return type;
     }

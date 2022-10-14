@@ -1,13 +1,10 @@
 package src.responsibility.simple;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class HandlerA extends Handler {
 
-    private String[] type = new String[]{"1","2","3"};
+    private String[] type = new String[]{"1","2","3","a","b","c","e","f"};
     public String[] getType() {
         return type;
     }
