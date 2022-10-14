@@ -1,21 +1,24 @@
 package src.responsibility.dynamic;
 
-public class HandlerC implements BaseHandler{
 
-    private BaseHandler handler;
+public class HandlerC extends Handler{
+    private String[] type = new String[]{"2","c","e"};
+    public String[] getType() {
+        return type;
+    }
 
-    @Override
-    public void setNext(BaseHandler handler) {
-        this.handler = handler;
+    public void setType(String[] type) {
+        this.type = type;
     }
 
     @Override
-    public void handle(Request request) {
-        System.out.println("HandlerC 执行开始 ==== " + request.getData() );
-        request.setData(request.getData().replace("C",""));
-        System.out.println("HandlerC 执行结束 ==== " + request.getData());
-        if(handler != null){
-            handler.handle(request);
+    public void handle(RequestBody requestBody) {
+        if(requestBody == null){
+            return;
         }
+        System.out.println("HandlerA 执行开始 ==== " + requestBody.getData() );
+        requestBody.setData(requestBody.getData().replace("B",""));
+        System.out.println("HandlerA 执行结束 ==== " + requestBody.getData());
     }
+
 }

@@ -1,4 +1,4 @@
-package src.responsibility.simple;
+package src.responsibility.dynamic;
 
 public class RequestBody {
 

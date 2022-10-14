@@ -1,4 +1,4 @@
-package src.responsibility.dynamic;
+package src.responsibility.simple;
 
 public interface BaseHandler {
 

@@ -1,24 +1,21 @@
 package src.responsibility.simple;
 
+public class HandlerB implements BaseHandler {
 
-public class HandlerB extends Handler{
-    private String[] type = new String[]{"2","3","4","b","c","e"};
-    public String[] getType() {
-        return type;
-    }
+    private BaseHandler handler;
 
-    public void setType(String[] type) {
-        this.type = type;
+    @Override
+    public void setNext(BaseHandler handler) {
+        this.handler = handler;
     }
 
     @Override
-    public void handle(RequestBody requestBody) {
-        if(requestBody == null){
-            return;
+    public void handle(Request request) {
+        System.out.println("HandlerB 执行开始 ==== " + request.getData() );
+        request.setData(request.getData().replace("B",""));
+        System.out.println("HandlerB 执行结束 ==== " + request.getData());
+        if(handler != null){
+            handler.handle(request);
         }
-        System.out.println("HandlerA 执行开始 ==== " + requestBody.getData() );
-        requestBody.setData(requestBody.getData().replace("B",""));
-        System.out.println("HandlerA 执行结束 ==== " + requestBody.getData());
     }
-
 }
