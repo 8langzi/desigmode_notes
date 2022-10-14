@@ -2,7 +2,7 @@ package src.responsibility.simple;
 
 public class HandlerB implements BaseHandler {
 
-    private BaseHandler handler;
+    private BaseHandler handler; // HandlerC
 
     @Override
     public void setNext(BaseHandler handler) {

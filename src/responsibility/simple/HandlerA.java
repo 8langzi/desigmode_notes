@@ -3,7 +3,7 @@ package src.responsibility.simple;
 
 public class HandlerA implements BaseHandler{
 
-    private BaseHandler handler;
+    private BaseHandler handler; // HandlerB
 
     @Override
     public void setNext(BaseHandler handler) {
