@@ -1,4 +1,4 @@
-package src.decorator;
+package src.structural.decorator;
 
 public interface Component {
     void excute();

@@ -1,4 +1,4 @@
-package src.component;
+package src.structural.component;
 
 public class Leaf extends AbstractNode{
 

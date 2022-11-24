@@ -1,4 +1,4 @@
-package src.decorator;
+package src.structural.decorator;
 
 public class BaseComponent implements Component{
     @Override

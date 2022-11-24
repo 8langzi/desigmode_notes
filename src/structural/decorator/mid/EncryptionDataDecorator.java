@@ -1,4 +1,4 @@
-package src.decorator.mid;
+package src.structural.decorator.mid;
 
 import java.util.Base64;
 
